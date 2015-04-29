@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">iPhoneSimulator</Platform>
+    <ProjectTypeGuids>{FEACFBD2-3405-455C-9665-78FE426C6842};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <ProjectGuid>{2682DA86-D8DC-4CFC-B4AC-57E4D38B5001}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <RootNamespace>frameworkstestapp</RootNamespace>
+    <IPhoneResourcePrefix>Resources</IPhoneResourcePrefix>
+    <AssemblyName>frameworks-test-app</AssemblyName>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|iPhoneSimulator' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\iPhoneSimulator\Debug</OutputPath>
+    <DefineConstants>DEBUG;</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ConsolePause>false</ConsolePause>
+    <MtouchArch>i386</MtouchArch>
+    <MtouchLink>None</MtouchLink>
+    <MtouchDebug>true</MtouchDebug>
+    <MtouchProfiling>true</MtouchProfiling>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|iPhone' ">
+    <DebugType>full</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\iPhone\Release</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodesignEntitlements>Entitlements.plist</CodesignEntitlements>
+    <MtouchArch>ARMv7, ARM64</MtouchArch>
+    <ConsolePause>false</ConsolePause>
+    <CodesignKey>iPhone Developer</CodesignKey>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|iPhoneSimulator' ">
+    <DebugType>full</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\iPhoneSimulator\Release</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <MtouchArch>i386</MtouchArch>
+    <ConsolePause>false</ConsolePause>
+    <MtouchLink>None</MtouchLink>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|iPhone' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\iPhone\Debug</OutputPath>
+    <DefineConstants>DEBUG;</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ConsolePause>false</ConsolePause>
+    <MtouchArch>ARMv7, ARM64</MtouchArch>
+    <CodesignEntitlements>Entitlements.plist</CodesignEntitlements>
+    <MtouchProfiling>true</MtouchProfiling>
+    <CodesignKey>iPhone Developer</CodesignKey>
+    <MtouchDebug>true</MtouchDebug>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Core" />
+    <Reference Include="Xamarin.iOS" />
+  </ItemGroup>
+  <ItemGroup>
+    <InterfaceDefinition Include="Resources\LaunchScreen.xib" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Info.plist" />
+    <None Include="Entitlements.plist" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AppDelegate.cs" />
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
+  <ItemGroup>
+    <ProjectReference Include="..\appextension\appextension.csproj">
+      <Project>{D49B961A-A4E4-462D-882D-63659E79D0E2}</Project>
+      <Name>appextension</Name>
+      <IsAppExtension>True</IsAppExtension>
+    </ProjectReference>
+    <ProjectReference Include="..\documentpickerextension\documentpickerextension.csproj">
+      <Project>{2B738C97-EA1C-4011-A46A-D99D9592D001}</Project>
+      <Name>documentpickerextension</Name>
+      <IsAppExtension>True</IsAppExtension>
+    </ProjectReference>
+    <ProjectReference Include="..\fileproviderextension\fileproviderextension.csproj">
+      <Project>{B9F7A956-099C-4FFC-B6E4-5D24AF665A73}</Project>
+      <Name>fileproviderextension</Name>
+      <IsAppExtension>True</IsAppExtension>
+    </ProjectReference>
+    <ProjectReference Include="..\keyboardextension\keyboardextension.csproj">
+      <Project>{36C5D47C-BAEE-4E64-8FEB-D0FECFBDFDBA}</Project>
+      <Name>keyboardextension</Name>
+      <IsAppExtension>True</IsAppExtension>
+    </ProjectReference>
+    <ProjectReference Include="..\photoeditingextension\photoeditingextension.csproj">
+      <Project>{EB8252E6-14C6-49E2-93F8-ED85264636A0}</Project>
+      <Name>photoeditingextension</Name>
+      <IsAppExtension>True</IsAppExtension>
+    </ProjectReference>
+    <ProjectReference Include="..\shareextension\shareextension.csproj">
+      <Project>{DAE61D29-7D13-4973-8DB9-C050CA55CBF2}</Project>
+      <Name>shareextension</Name>
+      <IsAppExtension>True</IsAppExtension>
+    </ProjectReference>
+    <ProjectReference Include="..\todayextension\todayextension.csproj">
+      <Project>{EE88AF0A-F225-4CC2-B081-FFEB6D9C800E}</Project>
+      <Name>todayextension</Name>
+      <IsAppExtension>True</IsAppExtension>
+    </ProjectReference>
+    <ProjectReference Include="..\WatchKitExtension\WatchKitExtension.csproj">
+      <Project>{33BA5E3C-7D34-40B2-AB2F-3B65B4FEF70E}</Project>
+      <Name>WatchKitExtension</Name>
+      <IsAppExtension>True</IsAppExtension>
+    </ProjectReference>
+  </ItemGroup>
+</Project>
