@@ -1,6 +1,6 @@
 # Test applications for embedded frameworks in Xamarin.iOS
 
-## embedded-framework (MyFramework.framework)
+## embedded-framework (MyFramework.framework)
 
 This is a sample Objective-C framework (MyFramework.framework), used by other
 projects. This can be rebuilt by simply executing `make`, although the binary
