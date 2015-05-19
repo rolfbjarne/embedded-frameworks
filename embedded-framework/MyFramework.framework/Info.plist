@@ -21,7 +21,7 @@
         <key>NSPrincipalClass</key>
         <string></string>
         <key>CFBundleExecutable</key>
-        <string>Mono</string>
+        <string>MyFramework</string>
         <key>BuildMachineOSBuild</key>
         <string>13F34</string>
         <key>CFBundleDevelopmentRegion</key>
