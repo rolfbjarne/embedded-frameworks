@@ -7,16 +7,15 @@ namespace frameworkstestappWatchKitExtension
 {
 	public partial class NotificationController : WKUserNotificationInterfaceController
 	{
-		public NotificationController (IntPtr handle) : base (handle)
+		protected NotificationController (IntPtr handle) : base (handle)
 		{
+			// Note: this .ctor should not contain any initialization logic.
 		}
 
-		public override void Awake (NSObject context)
+		public NotificationController ()
 		{
-			base.Awake (context);
-
+			// Initialize variables here.
 			// Configure interface objects here.
-			Console.WriteLine ("{0} awake with context", this);
 		}
 
 		public override void WillActivate ()

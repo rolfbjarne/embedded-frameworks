@@ -7,8 +7,9 @@ namespace frameworkstestappWatchKitExtension
 {
 	public partial class InterfaceController : WKInterfaceController
 	{
-		public InterfaceController (IntPtr handle) : base (handle)
+		protected InterfaceController (IntPtr handle) : base (handle)
 		{
+			// Note: this .ctor should not contain any initialization logic.
 		}
 
 		public override void Awake (NSObject context)

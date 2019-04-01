@@ -109,10 +109,10 @@
       <Name>todayextension</Name>
       <IsAppExtension>True</IsAppExtension>
     </ProjectReference>
-    <ProjectReference Include="..\WatchKitExtension\WatchKitExtension.csproj">
-      <Project>{33BA5E3C-7D34-40B2-AB2F-3B65B4FEF70E}</Project>
-      <Name>WatchKitExtension</Name>
-      <IsAppExtension>True</IsAppExtension>
+    <ProjectReference Include="..\WatchKitApp\WatchKitApp.csproj">
+      <IsWatchApp>true</IsWatchApp>
+      <Project>{EBDA1601-78BC-45C6-A727-5061478E41D3}</Project>
+      <Name>WatchKitApp</Name>
     </ProjectReference>
   </ItemGroup>
 </Project>
