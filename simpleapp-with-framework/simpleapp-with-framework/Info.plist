@@ -39,5 +39,7 @@
 	<string>Resources/Images.xcassets/AppIcons.appiconset</string>
 	<key>CFBundleDisplayName</key>
 	<string>simpleapp-with-framework</string>
+	<key>CFBundleName</key>
+	<string>simpleapp-with-framework</string>
 </dict>
 </plist>

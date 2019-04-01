@@ -37,5 +37,7 @@
 	<string>simpleapp</string>
 	<key>CFBundleIdentifier</key>
 	<string>com.xamarin.simpleapp</string>
+	<key>CFBundleName</key>
+	<string>simpleapp</string>
 </dict>
 </plist>
